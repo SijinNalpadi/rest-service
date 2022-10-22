@@ -45,7 +45,7 @@ ingress:
   enabled: true
   className: "nginx"
   annotations: {}
-    nginx.ingress.kubernetes.io/rewrite-target: /greeting
+    nginx.ingress.kubernetes.io/rewrite-target: "/greeting"
     # kubernetes.io/tls-acme: "true"
   hosts:
     - paths:
