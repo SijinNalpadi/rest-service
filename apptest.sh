@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Waiting For API to be Ready..."
-sleep 30
+sleep 60
 status_code=$(curl --write-out %{http_code} --silent --output /dev/null http://54.226.103.56/greeting)
 
 if [[ "$status_code" -ne 200 ]] ; then
