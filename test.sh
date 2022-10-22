@@ -5,6 +5,7 @@ status_code=$(curl --write-out %{http_code} --silent --output /dev/null http://5
 if [[ "$status_code" -ne 200 ]] ; then
   echo "Health check failed" 
   echo "FAILED" > commandResult.txt
+  exit 1
   
 else
   echo "Health check sucess"
@@ -12,8 +13,10 @@ else
   if [[ "$content" == "Hello" ]] ; then
     echo "API is working"
 	echo "FAILED" > commandResult.txt
+	exit 1
   else
 	echo "FAILED" > commandResult.txt
+	exit 1
   fi	
 	
 fi
