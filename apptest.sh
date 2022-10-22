@@ -12,7 +12,7 @@ else
   echo "API Health Check Success..."
   content=$(curl -s http://54.226.103.56:32337/greeting|jq .content|tr -d '"'|cut -d ',' -f1)
   if [[ "$content" == "Hello" ]] ; then
-    echo "API Functionality is Success..."
+    echo "API Functionality Check Success..."
     exit 0
   else
     echo "API Functionality is Failed..."
