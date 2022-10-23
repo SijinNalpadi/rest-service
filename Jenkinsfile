@@ -140,7 +140,7 @@ spec:
                     withCredentials([file(credentialsId: 'kube-config', variable: 'KUBECONFIG')]){    
                         script{
                             def namespace = "dev"
-                            sh 'helm upgrade --install devopsapp --namespace $namespace --set image.name=$registry:$BUILD_NUMBER apphelm/'
+                            sh 'helm upgrade --install devopsapp --namespace dev --set image.name=$registry:$BUILD_NUMBER apphelm/'
 
                         }            
                     }
@@ -201,7 +201,7 @@ spec:
                         script{
 
                             def namespace = "production"
-                            sh 'helm upgrade --install devopsapp --namespace $namespace --set image.name=$registry:$BUILD_NUMBER --set ingress.hosts[0].paths[0].path=/greetingprod --set ingress.hosts[0].paths[0].pathType=ImplementationSpecific apphelm/'
+                            sh 'helm upgrade --install devopsapp --namespace production --set image.name=$registry:$BUILD_NUMBER --set ingress.hosts[0].paths[0].path=/greetingprod --set ingress.hosts[0].paths[0].pathType=ImplementationSpecific apphelm/'
 
                         }            
                     }
