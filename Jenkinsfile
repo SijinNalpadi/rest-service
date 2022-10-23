@@ -166,7 +166,7 @@ spec:
                 container('perftest') {
                     script {
                         sh '''
-                            /hey -n 10 -c 5 http://54.226.103.56/greeting
+                            /hey -n 10 -c 5 http://52.87.174.4/greeting
                         '''
                     }
                 }
