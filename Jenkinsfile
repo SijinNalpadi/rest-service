@@ -187,7 +187,7 @@ spec:
                     withCredentials([file(credentialsId: 'kube-config', variable: 'KUBECONFIG')]){    
                         script{
 
-                            sh 'helm upgrade --install devopsapp --namespace production --set image.name=$registry:$BUILD_NUMBER --set ingress.hosts[0].paths[0].path=/greetingprod --set ingress.hosts[0].paths[0].pathType=ImplementationSpecific apphelm/'
+                            sh 'helm upgrade --install devopsapp --namespace prod --set image.name=$registry:$BUILD_NUMBER --set ingress.hosts[0].paths[0].path=/greetingprod --set ingress.hosts[0].paths[0].pathType=ImplementationSpecific apphelm/'
 
                         }            
                     }
