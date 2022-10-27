@@ -19,39 +19,24 @@ spec:
   - name: helm
     image: alpine/helm
     tty: true
-    command: ['cat']
-    volumeMounts:
-    - name: docker-sock
-      mountPath: /var/run/docker.sock    
+    command: ['cat'] 
   - name: mvn
     image: maven
     tty: true
-    command: ['cat']
-    volumeMounts:
-    - name: docker-sock
-      mountPath: /var/run/docker.sock    
+    command: ['cat']   
   - name: docker
     image: docker
     tty: true
     command: ['cat']
-    volumeMounts:
-    - name: docker-sock
-      mountPath: /var/run/docker.sock
   - name: functest
     image: sijinnalpadi/alpine
     tty: true
-    command: ['cat']
-    volumeMounts:
-    - name: docker-sock
-      mountPath: /var/run/docker.sock   
+    command: ['cat'] 
   - name: perftest
     image: sijinnalpadi/hey
     tty: true
-    command: ['cat']
-    volumeMounts:
-    - name: docker-sock
-      mountPath: /var/run/docker.sock       
-           
+    command: ['cat']       
+         
 '''
         }
     }
