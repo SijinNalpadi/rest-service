@@ -28,6 +28,9 @@ spec:
     image: docker
     tty: true
     command: ['cat']
+    volumeMounts:
+    - name: docker-sock
+      mountPath: /var/run/docker.sock
   - name: functest
     image: sijinnalpadi/alpine
     tty: true
