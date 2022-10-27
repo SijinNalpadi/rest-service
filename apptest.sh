@@ -2,7 +2,7 @@
 
 echo "Waiting For API to be Ready..."
 sleep 30
-status_code=$(curl --write-out %{http_code} --silent --output /dev/null http://52.87.174.4/greeting)
+status_code=$(curl --write-out %{http_code} --silent --output /dev/null http://3.252.74.69/greeting)
 
 if [[ "$status_code" -ne 200 ]] ; then
   echo "API Health Check Failed..." 
