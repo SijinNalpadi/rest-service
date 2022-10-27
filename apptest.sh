@@ -10,7 +10,7 @@ if [[ "$status_code" -ne 200 ]] ; then
   
 else
   echo "API Health Check Success..."
-  content=$(curl -s http://52.87.174.4/greeting|jq .content|tr -d '"'|cut -d ',' -f1)
+  content=$(curl -s http://3.252.74.69/greeting|jq .content|tr -d '"'|cut -d ',' -f1)
   if [[ "$content" == "Hello" ]] ; then
     echo "API Functionality Check Success..."
     exit 0
