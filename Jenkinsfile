@@ -100,7 +100,7 @@ spec:
             }
         } 
         
-        stage('Building Docker Image for API') {
+        stage('Building Docker Image for APIs') {
             steps{
                 container('docker') {
                     script {
