@@ -1,2 +1,2 @@
-# rest-service-api
+# rest-service-api-web
 # Sijin Nalpadi
